@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="description" content="Описание сайта">
+   <meta name="keywords" content="Ключевые слова">
+   <title>Document</title>
+   <style>
+   body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+      background: url(/img/page-uconstruct/cork-wallet.png) 50% 50% repeat;
+      background-size: 13% auto;
+      color: #525252;
+   }
+   .main {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: sans-serif;
+      width: 40%;
+      margin-top: -10%;
+    }
+   
+   img {
+      width: 200px;
+      height: 200px;
+   }
+   
+   span:first-child {
+      font-size: 6em;
+      opacity: 0.65;
+      font-weight: bold;
+      line-height: 1.3em;
+   }
+   
+   span:last-child {
+      font-size: 1.5em;
+      margin-top: -15px;
+      display: block;
+      /*opacity: 0.8;*/
+   }
+   p {
+      font-size: 0.9em;
+      opacity: 0.8;
+   }
+
+   p:last-child {
+      font-size: 1.1em;
+      line-height: 1em;
+      margin: 0;
+   }
+   </style>
+   <!--[if lt IE 9]>
+   <script src="//html5sniv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+
+<body>
+   <div class="main">
+      <img src="/img/page-uconstruct/img404.png" alt="">
+      <div class="error">
+         <span>404</span>
+         <span>Сторінку або файл не знайдено...</span>
+      </div>
+      <p>Спробуйте перейти до <a href="/">головної сторінки</a> та задати новий запит. <br> Якщо Ви впевнені, що сторінка існує, напишить <a href="mailto:templar1980@ukr.net">листа адміністратору</a>. <br></p>
+      <p>Дякуємо за розуміння!</p>
+   </div>
+   <script type="text/javascript">
+      var body = document.querySelector('body');
+      body.style.height = document.documentElement.clientHeight+'px';
+   </script>
+</body>
+
+</html>

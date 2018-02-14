@@ -1,0 +1,23 @@
+{
+  "name": "test",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Templar <templar1980@ukr.net>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize.css": "*",
+    "jquery": "3.*",
+    "reset.css":"*",
+    "animate.css": "*"
+  }
+}

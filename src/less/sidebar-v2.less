@@ -1,0 +1,115 @@
+/*  @sidebarTextColor: white;
+@sidebarBgColor: linear-gradient( 45deg, #2462a4, darken(#2462a4, 20%));
+@sidebarBgItemColor :  lighten(darken(#2462a4, 20%), 15%);
+@sidebarItemTextColor : white; 
+@SidebarItemBorder : 1px solid darken(#2462a4, 20%);  */
+
+@sidebarTextColor: gray;
+@sidebarBgColor: rgb(250, 250, 250);
+@sidebarBgItemColor : @sidebarBgColor ;
+@sidebarItemTextColor : #dd137b;
+@SidebarItemBorder : 1px solid lightgray; 
+
+.sidebar {
+  box-sizing: border-box;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  width: 25%;
+  box-shadow: 2px 0px 4px -3px gray;
+  background: @sidebarBgColor;
+  /* height: 100%; */
+  float: left;
+  margin-top: -35px;
+  padding-top: 55px;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  &-menu-1 {
+    li {
+      cursor: pointer;
+      /* color: #2462a4; */
+      color: @sidebarItemTextColor;
+      text-transform: uppercase;
+      font-size: 0.9em;
+      /* font-weight: bold; */
+      span {
+        background: @sidebarBgItemColor;
+        display: block;
+        padding: 10px 0;
+        padding-left: 20px;
+        opacity: 1;
+        border-bottom: @SidebarItemBorder;
+        i {
+          font-size: 0.7em;
+          opacity: 0.85;
+          float: right;
+        }
+      }
+      &.active {
+        & .sidebar-menu-2 {
+          display: block;
+        }
+      }
+    }
+  }
+  &-menu-2 {
+    padding: 10px 0;
+    /* background: #2462a4; */
+    display: none;
+    li {
+      /* background: #2462a4; */
+      color: @sidebarTextColor;
+      font-weight: normal;
+      padding: 5px 0;
+      margin: 0 15px;
+      font-size: 1em;
+      a {
+        text-transform: none;
+      }
+      i {
+        font-size: 0.6em;
+        /* float: right;
+        transform: translateY(3px); */
+        opacity: 0;
+      }
+    }
+  }
+  &-menu-3 {
+    margin-top: 5px;
+    li {
+      font-size: 1em;
+    }
+  }
+  .selected {
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      border: 1px solid white;
+      margin-right: 8px;
+      opacity: 0.3;
+      transform: translateY(-1px);
+    }
+  }
+ /*   .selected:hover {
+  a {
+    border-bottom: 1px solid rgba(250, 250, 250, 0.3);
+    transition: all 0.3s ease-out;
+  }
+  &:before {
+    background: white;
+    transition: background 0.3s ease-out;
+  }
+   }  */
+   .selected:hover {
+  background: gray;
+  color: white;
+  transition: all 0.3s ease-out;
+  &:before {
+    opacity: 0;
+  }
+} 
+}

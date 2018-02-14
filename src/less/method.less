@@ -1,0 +1,139 @@
+.method {
+  p {
+    line-height: 1.2em;
+  }
+  ul {
+    list-style: square outside;
+    padding-left: 20px;
+    margin-top: 5px;
+    // margin-bottom: 30px;
+    li {
+      margin-top: 5px;
+    }
+  }
+
+  .method_name {
+  height: 40px;
+  padding: 0 10px;
+  line-height: 40px;
+  margin: 15px 0;
+  border-radius: 5px;
+  background: lighten(#2462a4, 20%);
+  color: lighten(#2462a4, 55%);
+  // font-weight: bold;
+  z-index: 3;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  &:hover {
+    background: darken(lighten(#2462a4, 20%), 8%);
+  }
+  i {
+    display: inline-block;
+    float: right;
+    height: 40px;
+    font-size: 0.8em;
+    &:before {
+      line-height: 40px;
+    }
+  }
+}
+
+.method_text {
+  padding: 20px 15px 30px 15px;
+  border: 1px solid darken(lighten(#70B6FF, 25%), 5%);
+  background: lighten(#70B6FF, 25%);
+  position: relative;
+  border-radius: 5px;
+  top: -15px;
+  z-index: 2;
+  display: none;
+  .files-field {
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li {
+        margin: 0;
+      }
+    }
+  }
+  h3 {
+    color: #dd137b;
+    font-weight: bold;
+    margin-top: 15px;
+  }
+  ol {
+    // list-style: decimal outside;
+    padding-left: 20px;
+    li {
+      margin-top: 5px;
+      line-height: 1.1em;
+    }
+  }
+  ul {
+    list-style: circle outside;
+    padding-left: 20px;
+    li {
+      margin-top: 5px;
+      line-height: 1.1em;
+      &.ul_name {
+        font-weight: bold;
+        text-decoration: underline;
+      }
+    }
+  }
+  p,
+  ol,
+  ul {
+    margin-top: 5px;
+  }
+  p {
+    line-height: 1.1em;
+  }
+  span {
+    // color: #F557A8;
+    font-weight: bold;
+  }
+  .method_img {
+    width: 75%;
+    display: block;
+    margin: 10px auto;
+    border-radius: 5px;
+  }
+  .method_img_vertical {
+    width: 45%;
+  }
+  .method_foto {
+    margin: 0px 10px 10px 10px;
+    position: relative;
+    float: right;
+    width: 180px;
+    height: 280px;
+    overflow: hidden;
+    border: 2px solid white;
+    box-shadow: 1px 1px 2px 0 gray;
+    border-radius: 8px;
+    img {
+      width: 100%;
+      height: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &:after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 0;
+      clear: both;
+    }
+  }
+}
+
+}
+

@@ -1,0 +1,300 @@
+.content
+{
+    width: 100%;
+    min-height: 1500px;
+    padding: 20px 70px;
+    padding-bottom: 100px;
+
+    background: #f7f7f7;
+}
+
+.sitemap
+{
+    *
+    {
+        box-sizing: border-box;
+    }
+    & > img
+    {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    & > p
+    {
+        font-size: .95em;
+        line-height: 1.1em;
+
+        padding-bottom: 40px;
+
+        text-align: justify;
+        strong
+        {
+            font-weight: bold;
+        }
+    }
+    .main-menu-sitemap
+    {
+        display: flex;
+        flex-direction: row;
+
+        align-items: center;
+        justify-content: space-between;
+        a
+        {
+            padding: 10px 15px;
+
+            cursor: pointer;
+            text-decoration: none;
+
+            color: #fff;
+            border-radius: 5px;
+            background: linear-gradient(to bottom, darkorange, darken(darkorange, 10%));
+        }
+        & > a:first-child
+        {
+            /* display: inline-block; */
+            span
+            {
+                display: block;
+            }
+            span:first-child
+            {
+                text-transform: uppercase;
+                /*font-weight: bold;*/
+            }
+            span:last-child
+            {
+                font-size: .7em;
+
+                opacity: .65;
+            }
+        }
+        ul
+        {
+            /*display: flex;*/
+            li
+            {
+                display: inline-block;
+            }
+        }
+        /* ul {
+            display: flex;
+            display: inline-block;
+            float: right;
+            li {
+                display: inline-block;
+                height: 100%;
+            }
+        } */
+    }
+    .main-level
+    {
+        display: block;
+        /*background: #133355;*/
+
+        width: 100%;
+        margin-top: 20px;
+        padding: 20px 15px;
+
+        cursor: pointer;
+        transition: width .3s ease-out;
+        text-transform: uppercase;
+
+        color: white;
+        border-radius: 5px;
+        background: linear-gradient(to bottom, lighten(#133355, 13%), #133355);
+        & + ul
+        {
+            display: flex;
+
+            margin-left: 30px;
+            padding: 0 0 0 0;
+
+            flex-flow: row wrap;
+
+            li.sub-level
+            {
+                position: relative;
+
+                display: flex;
+
+                margin: 8px 20px;
+                & > a
+                {
+                    display: block;
+
+                    box-sizing: content-box;
+                    width: 300px;
+                    padding: 15px 15px;
+
+                    transition: all .3s ease-out;
+                    text-decoration: none;
+
+                    color: inherit;
+                    border-radius: 5px;
+                    background: bisque;
+                    & > span:first-child
+                    {
+                        font-size: 1em;
+                        font-weight: bold;
+
+                        display: block;
+
+                        padding-bottom: 5px;
+
+                        color: dimgray;
+                    }
+                    & > span:nth-child(2)
+                    {
+                        font-size: .75em;
+
+                        display: block;
+
+                        padding-bottom: 5px;
+
+                        opacity: .9;
+                        color: darken(burlywood, 5%);
+                    }
+                    & > p:last-child
+                    {
+                        font-size: .75em;
+
+                        display: block;
+
+                        width: 85%;
+                        line-height: 1em
+                    }
+                    &:before
+                    {
+                        position: absolute;
+                        top: 0;
+                        left: -5px;
+
+                        display: block;
+
+                        width: 10px;
+                        height: 100%;
+
+                        content: '';
+
+                        background: #133355;
+                    }
+                    &:hover
+                    {
+                        // padding-left: 40px;
+                        transform: scale(1.1);
+
+                        background: darken(bisque, 10%);
+                    }
+                }
+            }
+        }
+    }
+
+
+    .txt-level
+    {
+        font-weight: bold;
+
+        display: block;
+
+        margin: 5px 0;
+        margin-top: 15px;
+        padding-bottom: 5px;
+
+        color: #1f548b;
+        border-bottom: 1px dashed #e6e6e6;
+        &:first-child
+        {
+            margin-top: 30px;
+        }
+        & + ul
+        {
+            font-size: .9em;
+
+            display: block!important;
+
+            padding-left: 30px;
+            li.sub-level
+            {
+                & > a
+                {
+                    text-decoration: none;
+
+                    color: inherit;
+                    & > span:first-child
+                    {
+                        font-size: 1em;
+
+                        display: block;
+
+                        padding-bottom: 2px;
+
+                        color: dimgray;
+                    }
+                    & > span:nth-child(2)
+                    {
+                        display: none;
+                    }
+                    & > p:last-child
+                    {
+                        display: none;
+                    }
+                    &:hover
+                    {
+                        text-decoration: underline;
+
+                        color: darkorange;
+                        span
+                        {
+                            color: darkorange;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .controls
+    {
+        margin-bottom: 45px;
+
+        border-bottom: 1px solid lightgray;
+
+        button
+        {
+            padding: 5px 25px;
+
+            cursor: pointer;
+            transition: all .3s ease-out;
+
+            color: lightgray;
+            border: none;
+            border: 1px solid lightgray;
+            border-bottom: none;
+            border-radius: 5px 5px 0 0;
+            outline: none;
+            background: none;
+            i
+            {
+                font-size: 1.5em;
+            }
+            &.active
+            {
+                color: darkorange;
+                border: 1px solid darkorange;
+                border-bottom: none;
+                border-radius: 5px 5px 0 0;
+            }
+
+            &:not(.active):hover
+            {
+                color: #1f548b;
+                border: 1px solid #1f548b;
+                border-bottom: none;
+                border-radius: 5px 5px 0 0;
+            }
+        }
+    }
+}

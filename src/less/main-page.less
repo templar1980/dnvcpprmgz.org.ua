@@ -1,0 +1,57 @@
+/* 
+	Стили для АНОНСА и ОБЯВЛЕНИЯ
+	
+	стили временные
+ */
+
+@resolution : 750px;
+
+
+.mob-warning {
+    position: relative;
+    margin-bottom: 40px;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 20px;
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    p {
+        width: 75%;
+        position: absolute;
+        bottom: 28px;
+        left: 0;
+        text-align: justify;
+        em {
+            font-weight: bold;
+        }
+        a {
+            color: #5987b9;
+        }
+    }
+}
+
+
+@media screen and (max-width: @resolution) {
+    .mob-warning {
+        img {
+            width: 100%;
+            height: auto;
+        }
+        img:nth-child(1) {
+            display: none;
+        }
+        img:nth-child(2) {
+            display: block;
+        }
+        p {
+            width: 100%;
+            bottom: 0;
+            position: static;
+            em {
+                font-weight: 500;
+            }
+        }
+    }
+}
